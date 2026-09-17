@@ -458,8 +458,125 @@ span {
 
 
 /* =========================
+   PROJECTS
+========================= */
+
+.projects-section {
+    background: #080b0f;
+}
+
+.projects-intro {
+    color: #8f99a6;
+    max-width: 650px;
+    margin: 25px auto 0;
+    line-height: 1.7;
+}
+
+.project-card {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 0;
+    background: #090d12;
+    border: 1px solid #18212b;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 229, 255, 0.4);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+.project-image-wrap {
+    min-height: 430px;
+    background: #05070a;
+    overflow: hidden;
+}
+
+.project-image-wrap img {
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-image-wrap img {
+    transform: scale(1.035);
+}
+
+.project-content {
+    padding: 50px 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-tag {
+    color: #00e5ff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.project-content h3 {
+    font-size: clamp(30px, 4vw, 42px);
+    margin-bottom: 18px;
+}
+
+.project-content p {
+    color: #8f99a6;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.project-tech span {
+    padding: 7px 11px;
+    border: 1px solid #27323e;
+    border-radius: 6px;
+    color: #c6ccd4;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.project-btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 13px 20px;
+    border: 1px solid #00e5ff;
+    border-radius: 7px;
+    color: #00e5ff;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.project-btn:hover {
+    background: #00e5ff;
+    color: #05070a;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
    PRICING
 ========================= */
+
+
 
 .pricing-section {
     background: #070a0e;
@@ -916,6 +1033,15 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .project-card {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image-wrap,
+    .project-image-wrap img {
+        min-height: 360px;
+    }
+
     .why-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -974,6 +1100,17 @@ footer {
 
 
 @media (max-width: 600px) {
+
+    .project-content {
+        padding: 35px 25px;
+    }
+
+    .project-image-wrap,
+    .project-image-wrap img {
+        min-height: 260px;
+    }
+
+
 
     .navbar {
         height: 65px;
